@@ -130,7 +130,9 @@ class ReCaptcha
             $recaptchaResponse->success = true;
         } else {
             $recaptchaResponse->success = false;
-            $recaptchaResponse->errorCodes = $answers [error-codes];
+            // change see issue https://github.com/tutsplus/how-to-integrate-google-no-captcha-recaptcha-on-your-website/issues/1
+            //$recaptchaResponse->errorCodes = $answers [error-codes];
+            if (array_key_exists('error-codes', $answers) === true) { $recaptchaResponse->errorCodes = $answers['error-codes']; }
         }
 
         return $recaptchaResponse;
