@@ -33,7 +33,9 @@ if($recaptchaActive)
   if($_POST)     {      
 	// not load everywhere 
   // contact page 
+  
 	if (e_PAGE=="contact.php"    ||  	(e_PAGE == "SP_ContactUs.php")  ||
+	(e_PAGE == "form.php")  ||
 	(e_PAGE=="signup.php" && $signup_imagecode)  ||
 	(e_PAGE=="login.php" && $use_imagecode)
 	)
@@ -77,6 +79,7 @@ if($recaptchaActive)
 		    //return false;
 			}
 		}
+ 
 	}
 }
 							 
