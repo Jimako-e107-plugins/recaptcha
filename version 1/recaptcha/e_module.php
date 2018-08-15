@@ -30,11 +30,11 @@ if($recaptchaActive)
   @include_once e_PLUGIN."recaptcha/languages/".e_LANGUAGE.".php";
   @include_once e_PLUGIN."recaptcha/languages/English.php";
  
-  if($_POST)     {
+  if($_POST)     {      
 	// not load everywhere 
   // contact page 
-	if (e_PAGE=="contact.php"    OR
-	(e_PAGE=="signup.php" && $signup_imagecode)  OR
+	if (e_PAGE=="contact.php"    ||  	(e_PAGE == "SP_ContactUs.php")  ||
+	(e_PAGE=="signup.php" && $signup_imagecode)  ||
 	(e_PAGE=="login.php" && $use_imagecode)
 	)
 	{		 
@@ -67,11 +67,13 @@ if($recaptchaActive)
 	      
 	      $_POST['rand_num']= $code;
 	      $_POST['code_verify']= $code;
+	      $_POST['codeverify']= $code;
  
 		   // return true;
 		  } else {   
 			  $_POST['rand_num']= 'rand_num';
-	      $_POST['code_verify']= 'code_verify';    
+	      $_POST['code_verify']= 'code_verify';   
+				$_POST['codeverify']= 'codeverify';    
 		    //return false;
 			}
 		}

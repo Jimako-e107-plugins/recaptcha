@@ -6,6 +6,9 @@ define(LAN_RECAPTCHA_ADM_RECAPTCHA_PRIVATE,      "reCAPTCHA - Private Key");
 define(LAN_RECAPTCHA_ADM_SUBMIT,                 "Update Settings");
 define(LAN_RECAPTCHA_ADM_TITLE,         				 "No CAPTCHA reCAPTCHA Settings");
 define(LAN_RECAPTCHA_ADM_ACTIVE,         				 "Active?");
+define(LAN_RECAPTCHA_ERROR_MESSAGE,         		 "Incorrect Captcha..!");
+
+
  
 
 ?>
