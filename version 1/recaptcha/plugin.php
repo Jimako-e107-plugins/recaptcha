@@ -3,12 +3,12 @@
 //PLUGIN INFO------------------------------------------------------------------------------------------------+
 
   $eplug_name        = "NoCaptcha ReCaptcha";
-  $eplug_version     = "0.7";
+  $eplug_version     = "0.7.1";
   $eplug_author      = "Jimako";
   $eplug_url         = "https://www.e107.sk/";
   $eplug_email       = "use_forum";
   $eplug_description = "Plugin";
-  $eplug_compatible  = "e107v7";
+  $eplug_compatible  = "e107v07";
   $eplug_readme      = "readme.txt";
   $eplug_compliant   = FALSE;
   $eplug_module      = TRUE;
