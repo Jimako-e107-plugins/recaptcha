@@ -88,13 +88,24 @@ class ReCaptcha
      *
      * @return array response
      */
+     /*
     private function _submitHTTPGet($path, $data)
     {
         $req = $this->_encodeQS($data);
         $response = file_get_contents($path . $req);
         return $response;
+    }   */
+    private function _submitHTTPGet($path, $data)
+        {
+            $verify = curl_init();
+            curl_setopt($verify, CURLOPT_URL, $path);
+            curl_setopt($verify, CURLOPT_POST, true);
+            curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
+            curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
+            $response = curl_exec($verify);
+            return $response;
     }
-
     /**
      * Calls the reCAPTCHA siteverify API to verify whether the user passes
      * CAPTCHA test.
