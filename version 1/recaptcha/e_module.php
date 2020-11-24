@@ -37,7 +37,8 @@ if($recaptchaActive)
 	if (e_PAGE=="contact.php"    ||  	(e_PAGE == "SP_ContactUs.php")  ||
 	(e_PAGE == "form.php")  ||
 	(e_PAGE=="signup.php" && $signup_imagecode)  ||
-	(e_PAGE=="login.php" && $use_imagecode)
+	(e_PAGE=="login.php" && $use_imagecode) ||
+    (e_PAGE=="admin.php" && $use_imagecode && !ADMIN)
 	)
 	{		 
  	  

@@ -1,6 +1,10 @@
 # recaptcha
 No CAPTCHA reCAPTCHA  Captcha replacement for e107 v0.7.25+ or higher. 
 
+
+version 0.7.3 added support for admin login 
+
+
 Tested with 0.7.25  
 Tested with 1.0.4
 
